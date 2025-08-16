@@ -1,0 +1,70 @@
+site_name: Flight Project Docs
+site_description: Documentation for the Flight Project – a microservices-based system
+site_author: Your Name
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    - scheme: default
+      primary: grey        # Light mode navbar color
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: grey        # Dark mode navbar color
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.sections   # Expandable sections in nav
+    - navigation.expand     # Auto expand active nav
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
+    - content.tabs.link
+    - content.tooltips
+    - announce.dismiss
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/your-org/your-repo
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/your-profile
+
+nav:
+  - About the Project: index.md
+  - Architecture:
+      - System Architecture: architecture.md
+      - Database Diagram: database.md
+      - Sequential Diagram: sequence-diagram.md
+  - References: references.md
+  - Engineering Problems: engineering.md
+  - APIs:
+      - Overview: apis/overview.md
+      - Service Based APIs: apis/service-apis.md
+      - Explained APIs: apis/explained.md
+  - Services:
+      - Flights Service:
+          - About: services/flights/index.md
+          - Setup: services/flights/setup.md
+          - APIs: services/flights/apis.md
+      - Booking Service:
+          - About: services/booking/index.md
+          - Setup: services/booking/setup.md
+          - APIs: services/booking/apis.md
+      - Auth Service:
+          - About: services/auth/index.md
+          - Setup: services/auth/setup.md
+          - APIs: services/auth/apis.md
+      - Notification Service:
+          - About: services/notification/index.md
+          - Setup: services/notification/setup.md
+          - APIs: services/notification/apis.md
