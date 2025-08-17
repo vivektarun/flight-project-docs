@@ -8,13 +8,13 @@ theme:
   favicon: assets/logo.png
   palette:
     - scheme: default
-      primary: grey        # Light mode navbar color
+      primary: green        # Light mode navbar color
       accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
     - scheme: slate
-      primary: grey        # Dark mode navbar color
+      primary: black        # Dark mode navbar color
       accent: indigo
       toggle:
         icon: material/weather-sunny
@@ -22,6 +22,9 @@ theme:
   features:
     - navigation.sections   # Expandable sections in nav
     - navigation.expand     # Auto expand active nav
+    - navigation.instant
+    - navigation.tabs
+    - navigation.path
     - search.suggest
     - search.highlight
     - content.code.annotate
@@ -40,31 +43,32 @@ extra:
       link: https://twitter.com/your-profile
 
 nav:
-  - About the Project: index.md
+  - About: index.md
   - Architecture:
       - System Architecture: architecture.md
       - Database Diagram: database.md
       - Sequential Diagram: sequence-diagram.md
-  - References: references.md
-  - Engineering Problems: engineering.md
+  - Setup:
+      - Flights Service Setup: services/flights/setup.md
+      - Booking Service Setup: services/booking/setup.md
+      - Auth Service Setup: services/auth/setup.md
+      - Notification Service Setup: services/notification/setup.md
+  - Services:
+      - Flights Service:
+          - About: services/flights/index.md
+          - APIs: services/flights/apis.md
+      - Booking Service:
+          - About: services/booking/index.md
+          - APIs: services/booking/apis.md
+      - Auth Service:
+          - About: services/auth/index.md
+          - APIs: services/auth/apis.md
+      - Notification Service:
+          - About: services/notification/index.md
+          - APIs: services/notification/apis.md
   - APIs:
       - Overview: apis/overview.md
       - Service Based APIs: apis/service-apis.md
       - Explained APIs: apis/explained.md
-  - Services:
-      - Flights Service:
-          - About: services/flights/index.md
-          - Setup: services/flights/setup.md
-          - APIs: services/flights/apis.md
-      - Booking Service:
-          - About: services/booking/index.md
-          - Setup: services/booking/setup.md
-          - APIs: services/booking/apis.md
-      - Auth Service:
-          - About: services/auth/index.md
-          - Setup: services/auth/setup.md
-          - APIs: services/auth/apis.md
-      - Notification Service:
-          - About: services/notification/index.md
-          - Setup: services/notification/setup.md
-          - APIs: services/notification/apis.md
+  - References: references.md
+  - Engineering Problems: engineering.md
