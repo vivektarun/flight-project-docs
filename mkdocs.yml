@@ -8,7 +8,7 @@ theme:
   favicon: assets/logo.png
   palette:
     - scheme: default
-      primary: green        # Light mode navbar color
+      primary: teal        # Light mode navbar color
       accent: indigo
       toggle:
         icon: material/weather-night
